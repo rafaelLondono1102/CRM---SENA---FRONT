@@ -1,11 +1,11 @@
 import React from 'react'
-import CrearTalentosComponent from '../pages/components/ListarTalentosComponent';
+import ListarTalentosComponent from '../pages/components/ListarTalentosComponent';
 
 const VerTalentos = () => {
     return (
         <div>
             <h1>Talentos</h1>
-            <CrearTalentosComponent/>
+            <ListarTalentosComponent/>
         </div>
     )
 }

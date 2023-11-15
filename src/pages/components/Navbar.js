@@ -19,10 +19,10 @@ const ExampleNavbar = () => {
                                 Organizaciones
                             </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem>
+                                <DropdownItem href='../VerOrganizaciones'>
                                     Ver
                                 </DropdownItem>
-                                <DropdownItem>
+                                <DropdownItem href='../CrearOrganizacion'>
                                     Crear
                                 </DropdownItem>
                             </DropdownMenu>
