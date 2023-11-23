@@ -34,7 +34,8 @@ const CrearTalentosComponent = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:9005/api/v1/talent/', talento);
+            const result = await axios.post('http://localhost:9005/api/v1/talent/', talento);
+            console.log(result)
             router.push('../VerTalentos');
             alert("Se ha creado satisfactoriamente un Talento");
         } catch (error) {

@@ -32,10 +32,10 @@ const ExampleNavbar = () => {
                                 Oportunidades
                             </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem>
+                                <DropdownItem href='../VerOportunidades'>
                                     Ver
                                 </DropdownItem>
-                                <DropdownItem>
+                                <DropdownItem href='../CrearOportunidades'>
                                     Crear
                                 </DropdownItem>
                             </DropdownMenu>
