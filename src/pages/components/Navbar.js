@@ -58,7 +58,7 @@ const ExampleNavbar = () => {
                                 Gráficas
                             </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem>
+                                <DropdownItem href='../VerGraficas'>
                                     Ver
                                 </DropdownItem>
                             </DropdownMenu>
