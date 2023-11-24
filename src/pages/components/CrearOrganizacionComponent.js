@@ -18,8 +18,9 @@ const CrearOrganizacionComponent = () => {
         technologyLine: '',
         technologySubLine: '',
         webSite: '',
+        oficialSocialNetwork : '',
         socialNetworkName: '',
-        socialNetworkUserName: '',
+        linkedin: '',
         observations: ''
     });
 
@@ -41,6 +42,7 @@ const CrearOrganizacionComponent = () => {
     };
 
     const economicSectorEnum = ["Primario", "Secundario", "Terciario"]
+    const yesOrNoEnum = ["Si", "No"]
     const typeEnum = ["Mixta", "Privada", "Pública"]
     const sizeEnum = ["Micro", "Pequeña", "Mediana", "Grande"]
     const mainOptions = ["Biotecnología y Nanotecnología", "Ingenieria y diseño", "Electrónica y telecomunicaciones", "Tecnologías virtuales"]
@@ -168,16 +170,24 @@ const CrearOrganizacionComponent = () => {
                 </div>
                 <div className={styles.form_group}>
                     <label className={styles.label}>Sitio web:</label>
-                    <input
-                        type="text"
-                        name="webSite"
-                        value={organizacion.webSite}
-                        onChange={handleChange}
-                        className={styles.input}
-                    />
+                    <select name="webSite" value={organizacion.webSite} onChange={handleChange} className={styles.select}>
+                        <option value="">Selecciona una opción</option>
+                        {yesOrNoEnum.map(option => (
+                            <option name={option} key={option} value={option}>{option}</option>
+                        ))}
+                    </select>
                 </div>
                 <div className={styles.form_group}>
                     <label className={styles.label}>Red social oficial</label>
+                    <select name="oficialSocialNetwork" value={organizacion.oficialSocialNetwork} onChange={handleChange} className={styles.select}>
+                        <option value="">Selecciona una opción</option>
+                        {yesOrNoEnum.map(option => (
+                            <option name={option} key={option} value={option}>{option}</option>
+                        ))}
+                    </select>
+                </div>
+                <div className={styles.form_group}>
+                    <label className={styles.label}>Nombre de usuario</label>
                     <input
                         type="text"
                         name="socialNetworkName"
@@ -187,14 +197,13 @@ const CrearOrganizacionComponent = () => {
                     />
                 </div>
                 <div className={styles.form_group}>
-                    <label className={styles.label}>Nombre de usuario</label>
-                    <input
-                        type="text"
-                        name="socialNetworkUserName"
-                        value={organizacion.socialNetworkUserName}
-                        onChange={handleChange}
-                        className={styles.input}
-                    />
+                    <label className={styles.label}>Linkedin</label>
+                    <select name="linkedin" value={organizacion.linkedin} onChange={handleChange} className={styles.select}>
+                        <option value="">Selecciona una opción</option>
+                        {yesOrNoEnum.map(option => (
+                            <option name={option} key={option} value={option}>{option}</option>
+                        ))}
+                    </select>
                 </div>
                 <div className={styles.form_group}>
                     <label className={styles.label}>Observaciones</label>

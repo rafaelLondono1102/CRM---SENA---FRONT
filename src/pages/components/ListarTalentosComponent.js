@@ -60,8 +60,9 @@ const ListarTalentosComponent = () => {
                         <div className={styles.card_content}>Línea Tecnológica: {talento.technologyLine || "----------------"}</div>
                         <div className={styles.card_content}>Sublínea Tecnológica: {talento.technologySubLine || "----------------"}</div>
                         <div className={styles.card_content}>Sitio Web: {talento.webSite || "----------------"}</div>
-                        <div className={styles.card_content}>Red Social: {talento.socialNetworkName || "----------------"}</div>
-                        <div className={styles.card_content}>Usuario de Red Social: {talento.socialNetworkUserName || "----------------"}</div>
+                        <div className={styles.card_content}>Red Social oficial: {talento.oficialSocialNetwork || "----------------"}</div>
+                        <div className={styles.card_content}>Usuario de Red Social: {talento.socialNetworkName || "----------------"}</div>
+                        <div className={styles.card_content}>Linkedin: {talento.linkedin || "----------------"}</div>
                         <div className={styles.card_content}>Observaciones: {talento.observations || "----------------"}</div>
                         <button
                             onClick={() => handleDelete(talento._id)}

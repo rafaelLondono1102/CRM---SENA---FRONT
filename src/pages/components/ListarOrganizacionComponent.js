@@ -58,8 +58,9 @@ const ListarOrganizacionComponent = () => {
                         <div className={styles.card_content}>Línea Tecnológica: {organizacion.technologyLine || "----------------"}</div>
                         <div className={styles.card_content}>Sublínea Tecnológica: {organizacion.technologySubLine || "----------------"}</div>
                         <div className={styles.card_content}>Sitio Web: {organizacion.webSite || "----------------"}</div>
-                        <div className={styles.card_content}>Red Social: {organizacion.socialNetworkName || "----------------"}</div>
-                        <div className={styles.card_content}>Usuario de Red Social: {organizacion.socialNetworkUserName || "----------------"}</div>
+                        <div className={styles.card_content}>Red social oficial: {organizacion.oficialSocialNetwork || "----------------"}</div>
+                        <div className={styles.card_content}>Usuario de Red Social: {organizacion.socialNetworkName || "----------------"}</div>
+                        <div className={styles.card_content}>Linkedin: {organizacion.linkedin || "----------------"}</div>
                         <div className={styles.card_content}>Observaciones: {organizacion.observations || "----------------"}</div>
                         <button
                             onClick={() => handleDelete(organizacion._id)}

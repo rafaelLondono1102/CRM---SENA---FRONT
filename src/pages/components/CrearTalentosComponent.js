@@ -20,8 +20,9 @@ const CrearTalentosComponent = () => {
         technologyLine: '',
         technologySubLine: '',
         webSite: '',
+        oficialSocialNetwork : '',
         socialNetworkName: '',
-        socialNetworkUserName: '',
+        linkedin: '',
         observations: ''
     });
 
@@ -45,6 +46,7 @@ const CrearTalentosComponent = () => {
 
     const ageEnum = ["10 - 20", "21 - 30", "31 - 40", "41 - 50", "51 - 60", "61 - 70", "71 - 80"]
     const scholarshipEnum = ["Primaria", "Bachiller Académico", "Técnico", "Tecnólogo", "Profesional", "Especialización", "Maestría", "Doctorado", "Post doctorado"]
+    const yesOrNoEnum = ["Si", "No"]
     const mainOptions = ["Biotecnología y Nanotecnología", "Ingenieria y diseño", "Electrónica y telecomunicaciones", "Tecnologías virtuales"]
     const subOptions = {
         'Biotecnología y Nanotecnología': ["Biotecnología industrial", "Microbiología agrícola y pecuaria", "Biotecnología vegetal", "Medio ambiente",
@@ -191,16 +193,24 @@ const CrearTalentosComponent = () => {
                 </div>
                 <div className={styles.form_group}>
                     <label className={styles.label}>Sitio web:</label>
-                    <input
-                        type="text"
-                        name="webSite"
-                        value={talento.webSite}
-                        onChange={handleChange}
-                        className={styles.input}
-                    />
+                    <select name="webSite" value={talento.webSite} onChange={handleChange} className={styles.select}>
+                        <option value="">Selecciona una opción</option>
+                        {yesOrNoEnum.map(option => (
+                            <option name={option} key={option} value={option}>{option}</option>
+                        ))}
+                    </select>
                 </div>
                 <div className={styles.form_group}>
                     <label className={styles.label}>Red social oficial</label>
+                    <select name="oficialSocialNetwork" value={talento.oficialSocialNetwork} onChange={handleChange} className={styles.select}>
+                        <option value="">Selecciona una opción</option>
+                        {yesOrNoEnum.map(option => (
+                            <option name={option} key={option} value={option}>{option}</option>
+                        ))}
+                    </select>
+                </div>
+                <div className={styles.form_group}>
+                    <label className={styles.label}>Nombre de Usuario</label>
                     <input
                         type="text"
                         name="socialNetworkName"
@@ -210,14 +220,13 @@ const CrearTalentosComponent = () => {
                     />
                 </div>
                 <div className={styles.form_group}>
-                    <label className={styles.label}>Nombre de usuario</label>
-                    <input
-                        type="text"
-                        name="socialNetworkUserName"
-                        value={talento.socialNetworkUserName}
-                        onChange={handleChange}
-                        className={styles.input}
-                    />
+                <label className={styles.label}>Linkedin</label>
+                    <select name="linkedin" value={talento.linkedin} onChange={handleChange} className={styles.select}>
+                        <option value="">Selecciona una opción</option>
+                        {yesOrNoEnum.map(option => (
+                            <option name={option} key={option} value={option}>{option}</option>
+                        ))}
+                    </select>
                 </div>
                 <div className={styles.form_group}>
                     <label className={styles.label}>Observaciones</label>
